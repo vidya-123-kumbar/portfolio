@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --primary:#5f8db5;
+    --primary-dark:#446a95;
+    --secondary:#92a7c0;
+    --background:#08121e;
+    --surface:#101b29;
+    --surface-soft:rgba(255,255,255,0.04);
+    --surface-strong:rgba(255,255,255,0.10);
+    --text:#e7eef7;
+    --text-light:#bfcbdc;
+    --text-muted:#8e99a8;
+    --text-h:#c3d0e2;
+    --border:rgba(183,197,214,0.18);
+    --shadow:0 24px 80px rgba(0,0,0,0.28);
+    --shadow-soft:0 16px 40px rgba(0,0,0,0.18);
+    --accent:rgba(95,141,181,0.18);
+    --accent-strong:#6a8eb8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:var(--text);
+    overflow-x:hidden;
+    background:linear-gradient(180deg, #08131f 0%, #0f1c2d 55%, #132637 100%);
+}
+
+/* Section */
+
+section{
+    scroll-margin-top:120px;
+    position:relative;
+}
+
+/* Reusable Container */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Glass Card */
+
+.glass{
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid var(--glass-border);
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+}
+
+/* Smooth Transition */
+
+*{
+    transition:.3s ease;
+}
+
+/* Floating Background */
+
+body::before{
+    content:"";
+
+    position:fixed;
+
+    width:260px;
+    height:260px;
+
+    background:rgba(124,164,176,0.16);
+
+    filter:blur(90px);
+
+    top:-80px;
+    left:-80px;
+
+    z-index:-2;
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:220px;
+    height:220px;
+
+    background:rgba(111,142,159,0.12);
+
+    filter:blur(90px);
+
+    bottom:-80px;
+    right:-60px;
+
+    z-index:-2;
+}
